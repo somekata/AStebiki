@@ -1,330 +1,96 @@
-/* =====================================
-   Reset / Base
-===================================== */
-* {
-  box-sizing: border-box;
+:root {
+    --primary-color: #1a73e8;
+    --accent-color: #e67e22;
+    --bg-color: #f8f9fa;
+    --text-color: #2c3e50;
+    --card-bg: #ffffff;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               "Hiragino Kaku Gothic ProN", "Noto Sans JP",
-               Meiryo, sans-serif;
-  line-height: 1.75;
-  color: #111;
-  background-color: #ffffff;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
 }
 
-/* =====================================
-   Layout
-===================================== */
-header,
-nav,
-main,
-footer {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 2rem;
-}
-
-/* =====================================
-   Header (Title Area)
-===================================== */
 header {
-  padding-top: 3rem;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid #e5e5e5;
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-header h1 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  position: relative;
+header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+
+.container {
+    max-width: 1100px;
+    margin: -40px auto 40px;
+    padding: 0 20px;
 }
 
-header h1::after {
-  content: "";
-  display: block;
-  width: 64px;
-  height: 4px;
-  background: linear-gradient(90deg, #222, #4a90e2);
-  margin-top: 0.6rem;
+.about-section {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
 }
 
-header p {
-  margin-top: 0.8rem;
-  color: #555;
-  max-width: 850px;
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
 }
 
-/* =====================================
-   Navigation
-===================================== */
-nav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+.card:hover { transform: translateY(-5px); }
+.card.highlight { border: 2px solid var(--primary-color); }
+
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
-nav a {
-  position: relative;
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 6px;
+.progress { background: #eee; color: #666; }
+.auto { background: #e3f2fd; color: #1a73e8; }
+.comp { background: #fef9e7; color: #b7950b; }
 
-  /* うっすら背景（常時） */
-  background: rgba(30, 90, 160, 0.08);
+.description { font-size: 0.95rem; flex-grow: 1; }
+.tech-info { font-size: 0.8rem; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 10px; }
 
-  color: #0f2f5f;
-  text-decoration: none;
-  transition: background 0.2s ease;
+.btn {
+    display: block;
+    text-align: center;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 20px;
+    transition: opacity 0.3s;
 }
 
-/* 常時うっすら線 */
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 8px;              /* 背景paddingに合わせる */
-  right: 8px;
-  bottom: 2px;
-  height: 1px;
-  background: rgba(30, 90, 160, 0.35);
-}
+.btn:hover { opacity: 0.8; }
 
-/* hover時：背景と線を強調 */
-nav a:hover {
-  background: rgba(30, 90, 160, 0.18);
-}
-
-nav a:hover::after {
-  height: 2px;
-  background: rgba(30, 90, 160, 0.7);
-}
-
-
-/* =====================================
-   Section
-===================================== */
-section {
-  margin-top: 3.5rem;
-}
-
-section section {
-  margin-top: 2rem;
-  padding-left: 1.5rem;
-  border-left: 3px solid #e0e0e0;
-}
-
-/* =====================================
-   Headings
-===================================== */
-h2 {
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  position: relative;
-  padding-left: 0.8rem;
-}
-
-h2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.2em;
-  width: 4px;
-  height: 1.2em;
-  background-color: #4a90e2;
-}
-
-h3 {
-  font-size: 1.4rem;
-  margin-top: 3rem;
-  margin-bottom: 0.8rem;
-  color: #222;
-}
-
-h4 {
-  font-size: 1.15rem;
-  margin-top: 2rem;
-  margin-bottom: 0.4rem;
-  color: #333;
-}
-
-/* =====================================
-   Text
-===================================== */
-p {
-  margin: 0.5rem 0 0.8rem 0;
-  text-indent: 1em;
-}
-
-strong {
-  color: #000;
-  font-weight: 600;
-}
-
-/* =====================================
-   Emphasis / Accent
-===================================== */
-em {
-  font-style: normal;
-  color: #4a90e2;
-}
-
-mark {
-  background: linear-gradient(transparent 60%, #dbeafe 60%);
-  padding: 0 0.2em;
-}
-
-/* =====================================
-   Lists
-===================================== */
-ul {
-  padding-left: 1.2rem;
-}
-
-li {
-  margin: 0.4rem 0;
-}
-
-/* =====================================
-   Footer
-===================================== */
 footer {
-  margin-top: 5rem;
-  padding-top: 2rem;
-  border-top: 1px solid #e5e5e5;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* =====================================
-   Utility (future use)
-===================================== */
-.accent {
-  color: #4a90e2;
-}
-
-.border-accent {
-  border-left-color: #4a90e2;
-}
-/* =====================================
-   Table (Comparison)
-===================================== */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
-  margin-bottom: 2.5rem;
-  font-size: 0.95rem;
-}
-
-/* Header */
-table thead th {
-  text-align: left;
-  font-weight: 600;
-  padding: 0.8rem 0.9rem;
-  border-bottom: 2px solid #333;
-  background-color: #fafafa;
-}
-
-/* Body */
-table tbody td {
-  padding: 0.8rem 0.9rem;
-  vertical-align: top;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-/* First column (項目列) */
-table tbody td:first-child,
-table thead th:first-child {
-  width: 22%;
-  font-weight: 500;
-  color: #222;
-}
-
-/* Hover (控えめ) */
-table tbody tr:hover {
-  background-color: #f7faff;
-}
-
-/* =========================
-   Version emphasis
-========================= */
-
-/* 第4版セルをほんのり強調したい場合に使う */
-table td.v4 {
-  background: none;
-}
-
-
-/* 第3版セル（必要なら） */
-td.v3 {
-  color: #444;
-}
-
-/* =========================
-   Small text inside table
-========================= */
-table small {
-  color: #666;
-  font-size: 0.85em;
-}
-/* トップ＋ナビ全体 */
-#topNav {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background: rgba(30, 90, 160, 0.15); /* 半透明ブルー */
-  backdrop-filter: blur(6px);
-  border-radius: 12px;
-  padding: 10px 14px;
-  display: none;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-#topNav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#topNav li {
-  margin: 8px 0;
-}
-
-#topNav a {
-  text-decoration: none;
-  color: #0f2f5f;
-  font-size: 13px;
-  white-space: nowrap;
-}
-
-#topNav a:hover {
-  text-decoration: underline;
-}
-
-/* トップへだけ少し強調 */
-#topNav .top-link a {
-  font-weight: 600;
-  color: #123a7a;
-}
-/* トップ固定ナビは縦並びにする */
-#topNav ul {
-  display: block;   /* flexを無効化 */
-}
-
-#topNav li {
-  margin: 10px 0;   /* 縦間隔 */
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.85rem;
+    color: #7f8c8d;
 }
