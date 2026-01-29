@@ -1,0 +1,78 @@
+{
+  "app": {
+    "id": "antimicrobial_navigator",
+    "title": "Antimicrobial Navigator",
+    "subtitle": "抗微生物薬適正使用ナビゲーター",
+    "description": "抗微生物薬適正使用の手引きを基に、要点整理・参照を行う非公式学習・支援ツール",
+    "about": [
+      "2026年1月16日に公開された「抗微生物薬適正使用の手引き 第四版」を基に作成された非公式の学習・支援ツールである。",
+      "293ページある全文を参考にダイジェスト版として作成した。",
+      "ただし、公式のダイジェストではないため、臨床判断は必ず原典および最新のガイドラインを確認すること。",
+      "要約等の作成において、生成AIを一部用いているが、プログラム自体は手作業で作成している。"
+    ],
+    "disclaimer": [
+      "本アプリは公式ガイドラインではありません。",
+      "臨床判断は必ず原典および最新のガイドラインをご確認ください。",
+      "本アプリでは要約等の作成段階において一部生成AIを用いています。"
+    ]
+  },
+  "guides": 
+  {
+    "edition": "第四版",
+    "year": 2026,
+    "title": "抗微生物薬適正使用の手引き（第四版）",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000120172.html#h2_free3",
+    "parts": [
+      {
+        "id": 1,
+        "title": "医科・外来編",
+        "url": "https://www.mhlw.go.jp/content/10900000/001630903.pdf",
+        "path": "data/outpatient/outpatient_v4.json"
+      },
+      {
+        "id": 2,
+        "title": "医科・入院編",
+        "url": "https://www.mhlw.go.jp/content/10900000/001630904.pdf",
+        "path": "data/inpatient/inpatient_v4.json"
+      },
+      {
+        "id": 3,
+        "title": "薬剤耐性菌感染症の抗菌薬適正使用編",
+        "url": "https://www.mhlw.go.jp/content/10900000/001630929.pdf",
+        "path": "data/amr/amr_v4.json"
+      },
+      {
+        "id": 4,
+        "title": "歯科編",
+        "url": "https://www.mhlw.go.jp/content/10900000/001630930.pdf",
+        "path": "data/dental/dental_v4.json"
+      }
+    ]
+  },
+  "previous_guides":{
+    "edition": "第三版",
+    "year": 2023,
+    "title": "抗微生物薬適正使用の手引き（第三版）",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000120172.html#h2_free3",
+    "parts": [
+      {
+        "id": 1,
+        "title": "本編",
+        "url": "https://www.mhlw.go.jp/content/10900000/001168459.pdf",
+        "path": "data/main_v3.json"
+      },
+      {
+        "id": 2,
+        "title": "別冊",
+        "url": "https://www.mhlw.go.jp/content/10900000/001168457.pdf",
+        "path": "data/append_v3.json"
+      },
+      {
+        "id": 3,
+        "title": "補遺",
+        "url": "https://www.mhlw.go.jp/content/10900000/001168458.pdf",
+        "path": "data/supple_v3.json"
+      }
+    ]
+  }
+}

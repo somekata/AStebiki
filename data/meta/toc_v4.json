@@ -1,0 +1,116 @@
+{
+  "version": "4th",
+  "language": "ja",
+  "source": "抗微生物薬適正使用の手引き 第四版",
+  "guides": [
+    {
+      "id": "outpatient",
+      "title": "医科・外来編",
+      "pdf": "pdf/001630903.pdf",
+      "toc": [
+        {
+          "type": "common",
+          "id": "glossary",
+          "title": "用語集",
+          "page": 4
+        },
+        {
+          "type": "chapter",
+          "id": "chapter1",
+          "number": 1,
+          "title": "はじめに",
+          "page": 10,
+          "children": [
+            { "type": "section", "no": "(1)", "title": "策定の経緯", "page": 10 },
+            { "type": "section", "no": "(2)", "title": "策定の目的", "page": 11 },
+            { "type": "section", "no": "(3)", "title": "手引きの対象", "page": 11 },
+            { "type": "section", "no": "(4)", "title": "想定する患者群", "page": 12 },
+            { "type": "section", "no": "(5)", "title": "科学的根拠の採用方針", "page": 14 }
+          ]
+        },
+        {
+          "type": "chapter",
+          "id": "chapter2",
+          "number": 2,
+          "title": "総論",
+          "page": 15,
+          "children": [
+            { "type": "section", "no": "(1)", "title": "抗微生物薬適正使用とは", "page": 15 },
+            { "type": "section", "no": "(2)", "title": "抗微生物薬使用の適応病態", "page": 15 },
+            { "type": "section", "no": "(3)", "title": "抗微生物薬の不適正使用とは", "page": 16 },
+            { "type": "section", "no": "(4)", "title": "抗菌薬のAWaRe分類とは", "page": 17 },
+            { "type": "section", "no": "(5)", "title": "その他", "page": 17 }
+          ]
+        },
+        {
+          "type": "chapter",
+          "id": "chapter4",
+          "number": 4,
+          "title": "急性気道感染症",
+          "page": 21,
+          "children": [
+            { "type": "section", "no": "(1)", "title": "急性気道感染症とは", "page": 21 },
+            { "type": "section", "no": "(2)", "title": "急性気道感染症の疫学", "page": 21 },
+            {
+              "type": "section",
+              "no": "(3)",
+              "title": "急性気道感染症の診断方法及び鑑別疾患",
+              "page": 23,
+              "children": [
+                { "type": "item", "no": "(i)", "title": "感冒" },
+                { "type": "item", "no": "(ii)", "title": "急性鼻副鼻腔炎" },
+                { "type": "item", "no": "(iii)", "title": "急性咽頭炎" },
+                { "type": "item", "no": "(iv)", "title": "急性気管支炎" }
+              ]
+            },
+            {
+              "type": "section",
+              "no": "(4)",
+              "title": "治療方法",
+              "page": 28,
+              "children": [
+                { "type": "item", "no": "(i)", "title": "感冒" },
+                { "type": "item", "no": "(ii)", "title": "急性鼻副鼻腔炎" },
+                { "type": "item", "no": "(iii)", "title": "急性咽頭炎" },
+                { "type": "item", "no": "(iv)", "title": "急性気管支炎" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "chapter",
+          "id": "chapter5",
+          "number": 5,
+          "title": "急性下痢症",
+          "page": 36,
+          "children": [
+            { "type": "section", "no": "(1)", "title": "急性下痢症とは", "page": 36 },
+            { "type": "section", "no": "(2)", "title": "急性下痢症の疫学", "page": 36 },
+            {
+              "type": "section",
+              "no": "(3)",
+              "title": "急性下痢症の診断方法及び鑑別疾患",
+              "page": 36,
+              "children": [
+                { "type": "item", "no": "(i)", "title": "ウイルスに起因する急性下痢症" },
+                { "type": "item", "no": "(ii)", "title": "細菌に起因する急性下痢症" }
+              ]
+            },
+            {
+              "type": "section",
+              "no": "(4)",
+              "title": "治療方法",
+              "page": 39,
+              "children": [
+                { "type": "item", "no": "(i)", "title": "小児の脱水への対応" },
+                { "type": "item", "no": "(ii)", "title": "サルモネラ腸炎" },
+                { "type": "item", "no": "(iii)", "title": "カンピロバクター腸炎" },
+                { "type": "item", "no": "(iv)", "title": "腸管出血性大腸菌（EHEC）腸炎" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
